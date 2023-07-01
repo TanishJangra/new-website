@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS APP</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="main-nav container flex"> <!-- container aur flex baad me add kre h after making utility class in css so that operations can be applied on all -->
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="./assets/logo2.png" alt="company logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex"> <!-- flex se sare ek line me aajaenge -->
+                     <li class="hover-link nav-item" id="Education" onclick="onNavItemClick('Education')">Education</li>            <!--.hover-link.nav-item -->
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                </ul>
+            </div>
+            <div class="search-bar flex"> 
+                <input type="text" id="search-text" class="news-input" placeholder="e.g. Science">          <!--  input.news-input-->
+                <button class="search-button" id="search-button">Search</button>
+
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            
+            <!-- cards ko template me daalenge bcs api call krni hai aur multiple cards dikhane hai-->
+        </div>
+    </main>
+    <template id="template-news-card">
+        <!-- template hame dikhai ni dega -->
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-img" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 30/10/2023</h6>
+                <p class="news-description" id="news-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi incidunt amet explicabo nemo, nostrum deserunt placeat quas maxime facere maiores!</p>
+            </div>
+            
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
